@@ -17,6 +17,7 @@ console.log(ursica.miaumiau())
 
 //   response.json().then(data => {
 //     console.log(data)
+     // response.json() turns always a PROMISE. That's why we can access its data using .then() method
 
 //     if (!(data instanceof Array)) {
 //       alert('nuuuuuuuu')
