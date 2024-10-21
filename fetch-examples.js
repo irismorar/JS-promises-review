@@ -54,18 +54,35 @@
 
 // ______________________________________________________________________________________________________
 
-Promise.all([
-  fetch('https://jsonplaceholder.typicode.com/todos'),
-  fetch('https://jsonplaceholder.typicode.com/albums'),
-]).then(([promise_response1, promise_response2]) => {
-  Promise.all([
-    promise_response1.json(),
-    promise_response2.json()
-  ]).then(([todos, albums]) => {
-    if (todos.length > albums.length) {
-      console.log(`Todos' array is bigger than albums' array`)
-    } else {
-      console.log(`Albums' array is bigger than todos array`)
-    }
+// Promise.all([
+//   fetch('https://jsonplaceholder.typicode.com/todos'),
+//   fetch('https://jsonplaceholder.typicode.com/albums'),
+// ]).then(([promise_response1, promise_response2]) => {
+//   Promise.all([
+//     promise_response1.json(),
+//     promise_response2.json()
+//   ]).then(([todos, albums]) => {
+//     if (todos.length > albums.length) {
+//       console.log(`Todos' array is bigger than albums' array`)
+//     } else {
+//       console.log(`Albums' array is bigger than todos array`)
+//     }
+//   })
+// })
+
+// ______________________________________________________________________________________________________
+
+// fetch('https://jsonplaceholder.typicode.com/todos').then(response => {
+//   console.log(response);
+//   response.json().then(data_infos => {
+//     console.log(data_infos)
+//   })
+// })
+
+// ______________________________________________________________________________________________________
+
+fetch('https://jsonplaceholder.typicode.com/users').then(response => {
+  response.json().then(data => {
+    console.log(data)
   })
 })
